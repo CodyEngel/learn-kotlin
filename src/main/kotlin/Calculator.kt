@@ -2,15 +2,13 @@ import kotlin.random.Random
 
 fun main() {
     printXtraLn("Properties & Fields / Calculator")
-    val calculator = BadCalculator()
+    val calculator = BetterCalculator()
     calculator.add(2)
     calculator.add(2)
     calculator.subtract(3)
     calculator.multiply(4)
     calculator.add(1)
     printXtraLn("Result: ${calculator.currentValue}")
-//    val remainder = calculator.remainder(2)
-//    printXtraLn("Remainder: $remainder")
 }
 
 class RandomCalculator : Calculator(
@@ -36,6 +34,7 @@ class BetterCalculator(initialValue: Int = 0) : Calculator(initialValue) {
 
 abstract class Calculator(initialValue: Int = 0) {
     open var currentValue = initialValue
+        protected set
 
     fun add(number: Int): Int {
         println("$currentValue + $number")
