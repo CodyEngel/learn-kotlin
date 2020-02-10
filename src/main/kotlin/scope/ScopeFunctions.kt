@@ -1,3 +1,5 @@
+package scope
+
 fun main() {
     println("Scope Functions")
     println()
@@ -32,11 +34,6 @@ fun main() {
     }
     println(apply.toString())
     println()
-
-//    val withOutApply = mutableListOf<Int>()
-//    withOutApply.add(1)
-//    withOutApply.add(2)
-//    withOutApply.add(3)
 
     val also = mutableListOf<Int>().also {
         it.add(1)
